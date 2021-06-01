@@ -1,0 +1,125 @@
+package com.company;
+import java.util.*;
+public class Java1 {
+    public static void main(String[] args) {
+        //Prints Bright IT Career 10 times
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Bright IT Career");
+        }
+            //Print numbers 1 to 20
+            for (int i = 0; i <= 20; i++) {
+                System.out.println(i);
+            }
+
+                System.out.println("Enter an Integer number:");
+                Scanner input = new Scanner(System.in);
+                int num = input.nextInt();
+                if ( num % 2 == 0 ) {
+                    System.out.println("Entered number is even");
+                }
+                else{
+                    System.out.println("Entered number is odd");
+                }
+    //largest number among three
+        int num1, num2, num3, result, temp;
+        System.out.println("Enter First Number to check for largest:");
+        num1 = input.nextInt();
+        System.out.println("Enter Second Number to check for largest:");
+        num2 = input.nextInt();
+        System.out.println("Enter Third Number to check for largest:");
+        num3 = input.nextInt();
+        temp = num1>num2 ? num1:num2;
+        result = num3>temp ? num3:temp;
+        System.out.println("Largest Number is:"+result);
+
+    // print 10 to 100 even numbers
+        int i = 10;
+        do {
+            System.out.println(i);
+            i=i+2;
+        }
+        while (i < 100);
+
+    //print 1 to 10 using do while
+        int j = 1;
+        do {
+            System.out.println(j);
+            j++;
+        }
+        while (j < 11);
+
+//armstrong number or not
+
+        int n, nu, number=0, rem;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter any Positive Number to check for armstrong or not: ");
+        n = scan.nextInt();
+
+        nu = n;
+
+        while(nu != 0)
+        {
+            rem = nu%10;
+            number = number + rem*rem*rem;
+            nu = nu/10;
+        }
+        if(number == n)
+        {
+            System.out.print("Armstrong Number");
+        }
+        else
+        {
+            System.out.println("Not an Armstrong Number");
+        }
+
+        //palindrome or not
+        int nump, remai, orig, rev=0;
+
+        System.out.print("Enter a Number to check for palindrome: ");
+        nump = scan.nextInt();
+        orig = nump;
+        while(nump != 0)
+        {
+            remai = nump%10;
+            rev = rev*10 + remai;
+            nump = nump/10;
+        }
+        if(rev==orig)
+        {
+            System.out.println("This is a Palindrome Number");
+        }
+        else
+        {
+            System.out.println("This is not a Palindrome Number");
+        }
+
+        //check number is even or odd using switch
+        System.out.println("Enter a Number to check for even or odd : ");
+        int nmbr = scan.nextInt();
+        switch(nmbr%2) {//this will return 0
+            case 0:
+                System.out.println(nmbr + " is an Even number");
+                break;
+            case 1:
+                System.out.println(nmbr + " is an Odd number");
+        }
+
+        //check male or female
+        System.out.println("enter your sex Male(M) or Female(F)");
+        String str;
+        str=scan.nextLine();
+      switch (str) {
+          case "M":
+              System.out.println("sex is Male");
+              break;
+          case "F":
+              System.out.println("sex is Male");
+      }
+    }
+}
+
+
+
+
+
